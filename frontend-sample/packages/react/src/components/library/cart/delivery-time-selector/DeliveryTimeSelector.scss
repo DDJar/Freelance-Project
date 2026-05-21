@@ -1,0 +1,25 @@
+@use "../../../../variables.scss" as *;
+
+.delivery-time-selector {
+    background-color: #fafafa;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+
+    h3 {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .dx-datebox,
+    .dx-selectbox {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .dx-checkbox {
+        margin-top: 0.5rem;
+    }
+
+}

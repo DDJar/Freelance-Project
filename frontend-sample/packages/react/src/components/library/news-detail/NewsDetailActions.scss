@@ -1,0 +1,25 @@
+.news-detail-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+    flex-wrap: wrap;
+
+    .dx-button {
+        background-color: transparent;
+        color: #666;
+        border: none;
+        padding: 8px 15px;
+        transition: all 0.3s;
+
+        &:hover {
+            color: #1890ff;
+            background-color: #f0f7ff;
+        }
+
+        .dx-icon {
+            margin-right: 8px;
+        }
+    }
+}

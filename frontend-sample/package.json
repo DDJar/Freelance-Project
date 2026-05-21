@@ -1,0 +1,37 @@
+{
+  "name": "devextreme-ui-template-gallery",
+  "private": true,
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "set-theme": "node utils/set-theme.js",
+    "copy-build": "node utils/copy-build.js",
+    "copy-shell": "node utils/copy-shell.js",
+    "make-embedded-mode": "node utils/make-embedded-mode.js",
+    "lint-html": "prettier --write . && prettier --check .",
+    "lint-fix": "prettier --write . && stylelint **/*.{css,scss} --fix",
+    "lint-css": "stylelint **/*.{css,scss}",
+    "lint-css-fix": "stylelint --fix **/*.{css,scss}"
+  },
+  "devDependencies": {
+    "@types/universal-cookie": "^2.2.0",
+    "eclint": "2.8.1",
+    "fs-extra": "^10.0.0",
+    "prettier": "2.4.1",
+    "stylelint": "^15.0.0",
+    "stylelint-config-standard": "^33.0.0",
+    "stylelint-config-standard-scss": "^11.1.0",
+    "stylelint-scss": "^5.3.2",
+    "typescript": "~5.2.0",
+    "universal-cookie": "^8.0.1"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "devextreme": "24.2.5",
+    "devextreme-dist": "24.2.5"
+  },
+  "pre-commit": [
+    "lint-bundles"
+  ]
+}

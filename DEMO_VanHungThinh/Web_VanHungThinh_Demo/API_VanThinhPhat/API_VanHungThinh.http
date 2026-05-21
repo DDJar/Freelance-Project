@@ -1,0 +1,24 @@
+@API_VanHungThinh_HostAddress = http://localhost:8080
+
+GET {{API_VanHungThinh_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+# Test Revenue Report
+GET {{API_VanHungThinh_HostAddress}}/api/reports/revenue?from=2024-01-01&to=2024-12-31
+Accept: application/json
+
+###
+
+# Test Inventory Report
+GET {{API_VanHungThinh_HostAddress}}/api/reports/inventory?from=2024-01-01&to=2024-12-31
+Accept: application/json
+
+###
+
+# Test Customer Aging Report
+GET {{API_VanHungThinh_HostAddress}}/api/reports/customer-aging
+Accept: application/json
+
+###

@@ -1,0 +1,180 @@
+@use "../../variables.scss" as *;
+@use "sass:math";
+
+.view-wrapper-dashboard {
+
+  td.dx-command-adaptive.dx-command-adaptive,
+  td.sales-bullet.sales-bullet {
+    border-left: none;
+    border-right: none;
+  }
+}
+
+// ===== Cards Layout =====
+.cards {
+  display: grid;
+  width: 100%;
+  margin-top: 20px;
+  gap: 20px;
+  height: auto;
+
+  &.compact {
+    grid-template-columns: repeat(4, 1fr); // 4 cột chia đều
+  }
+
+  &.normal {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-contents {
+    height: 50%;
+    margin-top: 4px
+  }
+
+  @media (max-width: 1200px) {
+    &.compact {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    &.compact,
+    &.normal {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// ===== CardAnalytics Styles =====
+.stats-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+
+  .stat-card {
+    background-color: var(--card-bg-color, #1f1f1f);
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .stat-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .stat-value {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--text-primary-color);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+
+      &.primary {
+        color: var(--primary-color);
+      }
+
+      &.small {
+        font-size: 1rem;
+      }
+    }
+
+    .stat-growth {
+      font-size: 0.875rem;
+      font-weight: 500;
+
+      &.positive {
+        color: #28a745;
+      }
+
+      &.negative {
+        color: #dc3545;
+      }
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--text-secondary-color);
+      white-space: nowrap;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ===== Charts =====
+.revenue-chart,
+.bill-count-chart {
+  .dx-chart {
+    background-color: transparent;
+  }
+
+  .dx-chart-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary-color);
+  }
+}
+
+// ===== Revenue Stats Grid (optional if reused) =====
+.revenue-stats {
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px;
+
+    .stat-item {
+      text-align: center;
+
+      .stat-value {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--primary-color);
+        margin-bottom: 5px;
+
+        &.positive {
+          color: #28a745;
+        }
+
+        &.negative {
+          color: #dc3545;
+        }
+      }
+
+      .stat-label {
+        font-size: 0.875rem;
+        color: var(--text-secondary-color);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .stats-grid {
+      grid-template-columns: 1fr;
+      gap: 10px;
+
+      .stat-item .stat-value {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

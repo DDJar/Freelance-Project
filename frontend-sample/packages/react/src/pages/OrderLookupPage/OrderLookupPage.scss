@@ -1,0 +1,95 @@
+.lookup-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #0f0f0f;
+  color: #f5f5f5;
+  font-family: 'Segoe UI', sans-serif;
+
+  .lookup-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .lookup-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0;
+      object-fit: cover;
+    }
+  }
+
+  .lookup-right {
+    flex: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1a1a1a;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
+
+    .lookup-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: #e0c29c; // gold highlight
+      text-transform: uppercase;
+    }
+
+    .lookup-form {
+      display: flex;
+      flex-direction: column;
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+
+        label {
+          font-weight: 500;
+          margin-bottom: 0.5rem;
+          color: #d0d0d0;
+
+          span {
+            color: #ff7070;
+          }
+        }
+
+        input {
+          padding: 0.75rem 1rem;
+          border: none;
+          border-radius: 8px;
+          background-color: #2a2a2a;
+          color: #fff;
+          font-size: 1rem;
+
+          &::placeholder {
+            color: #999;
+          }
+
+          &:focus {
+            outline: none;
+            background-color: #333;
+            box-shadow: 0 0 0 2px #e0c29c;
+          }
+        }
+      }
+
+      button {
+        padding: 0.75rem 1rem;
+        background-color: #e0c29c;
+        border: none;
+        border-radius: 8px;
+        color: #1a1a1a;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #f5d8a3;
+        }
+      }
+    }
+  }
+}

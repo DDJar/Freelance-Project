@@ -1,0 +1,232 @@
+@import '~devextreme/dist/css/dx.light.css';
+
+.product-catalog-container {
+    height: auto;
+    padding: 20px;
+    padding-top: 120px;
+
+    .product-catalog {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        h1 {
+            font-size: 60px;
+            color: #0d3a4f;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: bolder;
+            text-transform: uppercase;
+        }
+
+        .catalog-content {
+            display: flex;
+            gap: 30px;
+
+            .sticky-wrapper {
+                position: sticky;
+                top: 5%;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .filter-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+
+                .filters-sidebar {
+                    width: 250px;
+                    background-color: #0d3a4f;
+                    align-self: flex-start;
+
+                    .filter-header {
+                        display: flex;
+
+                        button {
+                            text-align: center;
+                            margin: auto;
+                        }
+                    }
+
+                    .filter-section {
+                        padding: 8px;
+                        padding-bottom: 2px;
+                        background-color: #0d3a4f;
+                        color: gold;
+
+                        h2 {
+                            font-size: 18px;
+                            margin-bottom: 15px;
+                            font-weight: bolder;
+                            color: gold;
+                            border-bottom: 1px solid #eee;
+                            padding-bottom: 8px;
+                            padding-left: 10px;
+                        }
+
+                        .dx-list {
+                            .dx-list-item {
+                                padding: 8px 0;
+                                border-bottom: none;
+                                color: white;
+
+                                &.dx-state-selected {
+                                    background-color: transparent;
+                                    color: #2a8bf7;
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .filters-footer {
+                    width: 250px;
+
+                    .clear-btn {
+                        width: 100%;
+                        background-color: #0d3a4f !important;
+                        color: gold;
+                        border: none;
+                        padding: 10px;
+                        border-radius: 4px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        transition: 0.2s;
+
+                        &:hover {
+                            background-color: #d32f2f;
+                        }
+                    }
+
+                    .invisible-btn {
+                        height: 42px;
+                    }
+                }
+
+            }
+
+
+            .filter-item {
+                margin-bottom: 8px;
+                padding: 10px 8px 8px 8px;
+                position: relative;
+
+                .dx-checkbox {
+                    color: gold;
+                    margin-right: 8px;
+                    font-size: 13px;
+                }
+            }
+
+            .product-listing {
+                flex: 1;
+
+                .sort-section {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 20px;
+
+
+
+                    .sort-right {
+                        display: flex;
+                        align-items: center;
+
+                        span {
+                            margin-right: 10px;
+                            font-size: 14px;
+
+                        }
+
+                        .dx-selectbox {
+                            width: 200px;
+                            color: gold;
+                        }
+                    }
+
+                    span {
+                        margin-right: 10px;
+                        font-size: 14px;
+                    }
+
+                    .dx-selectbox {
+                        width: 200px;
+                    }
+                }
+
+                .products-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                    gap: 20px;
+                }
+
+                .no-products {
+                    text-align: start;
+                    font-size: 18px;
+                    color: #888;
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
+    .pagination-container {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+
+        .dx-pager {
+            .dx-pages {
+                .dx-page {
+                    min-width: 36px;
+                    height: 36px;
+                    line-height: 36px;
+                    margin: 0 5px;
+                    border-radius: 4px;
+
+                    &.dx-selection {
+                        background-color: #2a8bf7;
+                        color: white;
+                    }
+                }
+            }
+
+            .dx-page-sizes {
+                .dx-page-size {
+                    min-width: 60px;
+                }
+
+                .dx-selection {
+                    display: none !important;
+                    font-weight: 500;
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .product-catalog-container {
+        .catalog-content {
+            flex-direction: column;
+
+            .filters-sidebar {
+                position: unset !important;
+            }
+
+            .product-listing {
+                width: 100%;
+
+                .sort-section {
+                    display: grid !important;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}

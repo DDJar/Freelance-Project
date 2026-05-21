@@ -1,0 +1,10 @@
+.app-theme-light {
+  content: '';
+}
+
+/* stylelint-disable */
+@import 'devextreme/scss/bundles/dx.fluent.blue.light.scss';
+
+.dx-button-mode-text {
+  background-color: white;
+}

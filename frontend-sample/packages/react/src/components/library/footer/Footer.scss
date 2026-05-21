@@ -1,0 +1,157 @@
+.footer-home {
+  background: #0d3a4f;
+  color: white;
+  padding: 60px 20px;
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+
+  .footer-left {
+    flex: 1;
+
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      color: gold;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      max-width: 500px;
+    }
+
+    .feedback-button {
+      background-color: white;
+      color: black;
+      border: none;
+      border-radius: 30px;
+      padding: 12px 24px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 24px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #1890ff;
+        color: white;
+      }
+    }
+
+    .social-icons {
+      display: flex;
+
+      img {
+        width: 80px;
+        height: 60px;
+        object-fit: contain;
+        border-radius: 10px;
+        box-sizing: border-box;
+        transition: transform 0.2s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .footer-right {
+    flex: 1;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      span {
+        display: block;
+        font-size: 14px;
+        color: gold;
+      }
+
+      strong {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .footer-logo {
+    margin-top: 20px;
+    margin-left: 40px;
+    width: 200px;
+    height: auto;
+    align-self: flex-start;
+  }
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid gold;
+  font-size: 0.9rem;
+  color: gold;
+}
+
+@media (max-width: 768px) {
+
+  .footer-home {
+    height: auto;
+    width: 100%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+
+    .social-icons {
+      justify-content: center;
+    }
+  }
+
+  .footer-right {
+    display: grid !important;
+    width: 100%;
+    justify-content: center !important;
+    padding-left: 0 !important;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  .footer-logo {
+    margin-top: 20px;
+    margin-left: 40px;
+    width: 200px;
+    height: auto;
+    align-self: center;
+  }
+}

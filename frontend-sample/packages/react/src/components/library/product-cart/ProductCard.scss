@@ -1,0 +1,112 @@
+.product-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-image {
+        height: 314px;
+        width: 100%;
+        background-color: #f5f5f5;
+
+        img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .product-info {
+        padding: 15px;
+
+        h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: #0d3a4f;
+            text-transform: uppercase;
+            font-weight: bolder;
+            height: 40px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .out-of-stock-label {
+            margin-top: 10px;
+            color: #ff0000;
+            font-weight: bold;
+            padding-right: 10px;
+            font-size: 15px;
+        }
+
+        .product-price {
+            .price-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+
+                .formatted-price {
+                    font-size: 15px;
+                    padding-top: 8px;
+                    font-weight: bold;
+                    color: goldenrod;
+                    margin-bottom: 8px;
+                    padding-right: 10px;
+                }
+
+                .action-buttons {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    gap: 0.5rem;
+                    margin-top: 0;
+
+                    .add-to-cart-button,
+                    .buy-now-button {
+
+                        flex: 1;
+                        background-color: #0d3a4f !important;
+                    }
+
+                    .buy-now-button :hover {
+                        background-color: #e0e0e0 !important;
+                        color: black;
+                    }
+
+                    .add-to-cart-button {
+                        width: 50% !important;
+                    }
+
+                    .buy-now-button {
+                        color: gold;
+                        min-width: 132px;
+                        border-radius: 0;
+                    }
+                }
+            }
+
+
+            .contact-container {
+                .contact-label {
+                    font-size: 16px;
+                    color: #666;
+                    font-style: italic;
+                }
+
+                .contact-label-phone {
+                    font-size: 15px;
+                    color: goldenrod;
+                    font-style: italic;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

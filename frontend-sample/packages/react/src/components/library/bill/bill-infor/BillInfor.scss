@@ -1,0 +1,80 @@
+.payment-info {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    flex: 2;
+    width: 80%;
+    display: flex;
+    gap: 20%;
+
+    h3 {
+        margin-top: 1.5rem;
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .payment-form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 120%;
+
+        input,
+        textarea {
+            padding: 0.6rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+    }
+
+    .shipping-info {
+        background-color: #e6f7fa;
+        padding: 0.75rem;
+        border-radius: 4px;
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+        color: #555;
+    }
+
+    .payment-method {
+        label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        input[type='radio'] {
+            transform: scale(1.2);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .payment-info {
+        gap: 1rem;
+        display: grid !important;
+        width: 100%;
+
+        .payment-form {
+
+            input,
+            textarea,
+            .select-box {
+                width: 86% !important;
+                font-size: 0.95rem;
+                padding: 0.5rem;
+            }
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+.page-content.analytics-page {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 2px;
+  padding-bottom: 20px;
+}
+
+.analytics-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+
+  // Style cho tiêu đề bên trái (giống ảnh bạn gửi)
+  .toolbar-title {
+    font-size: 19px;
+    color: #d19732; // Màu vàng cam
+    font-weight: 500;
+    white-space: nowrap;
+  font-weight: bold;
+  }
+
+  .dx-selectbox {
+    width: 200px;
+  }
+}
+
+.dashboard-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}

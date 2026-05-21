@@ -1,0 +1,25 @@
+.task-form-details {
+  min-height: 250px;
+  .dx-texteditor-container{
+    height: 42px
+  }
+}
+.form-buttons-row .dx-box {
+  display: flex !important;
+  justify-content: flex-end !important;
+  gap: 12px;
+  width: 100%;
+}
+.form-buttons-row .dx-box-item {
+  flex: 0 0 auto !important;
+}
+.form-buttons-row .dx-field-button-item {
+  text-align: right !important;
+}
+
+
+
+
+
+
+

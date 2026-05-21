@@ -1,0 +1,19 @@
+.card-report {
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  .card-title {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+}

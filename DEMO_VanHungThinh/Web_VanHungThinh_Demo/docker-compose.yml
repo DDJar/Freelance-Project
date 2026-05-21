@@ -1,0 +1,11 @@
+services:
+  api_vanhungthinh:
+    image: ${DOCKER_REGISTRY-}apivanhungthinh
+    build:
+      context: .
+      dockerfile: API_VanThinhPhat/Dockerfile
+    ports:
+     - "8080:8080"
+     - "8081:8081"
+    environment:
+      MONGODB_URI: "mongodb+srv://longtoanbui2002:6aW6VdlZiuQJhwzU@cluster0.eglwj7i.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" 

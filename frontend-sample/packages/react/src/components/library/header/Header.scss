@@ -1,0 +1,253 @@
+.header-home {
+  position: sticky;
+  z-index: 1000;
+  background-color: #0d3a4f;
+  box-shadow: 0 2px 3px gold;
+
+  .header-container {
+    display: flex;
+    width: 100%;
+  }
+
+  .header-left {
+    color: black;
+    padding: 0 1rem;
+    padding-right: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 0.5;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      text-decoration: none;
+      width: 80%;
+
+      img {
+        height: 120px;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .header-right {
+    flex: 1;
+    padding: 2rem 2rem;
+
+
+    .dx-toolbar .dx-toolbar-items-container {
+      .dx-toolbar-center {
+        float: none !important;
+        padding-left: 6rem;
+      }
+    }
+
+    .dx-button-mode-text {
+      background-color: unset !important;
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: start;
+      flex-wrap: nowrap;
+      width: 100%;
+
+      a,
+      .dx-button-text {
+        color: white !important;
+      }
+
+      .dx-dropdownbutton {
+        margin-bottom: 4px;
+        background-color: unset !important;
+      }
+
+      .header_dropdown .dx-button {
+        box-shadow: none;
+        background-color: unset !important;
+        border: 0;
+      }
+
+      .header_dropdown .dx-button:hover {
+        background-color: unset !important;
+      }
+
+      .header_dropdown .dx-button-content {
+        padding: 0.75rem 1rem;
+        font-weight: 600;
+      }
+
+      .navLink {
+        padding: 0.75rem 1rem;
+        color: gold !important;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+          color: orange;
+        }
+      }
+
+      .cartButton {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 10px;
+        background-color: white;
+        color: black;
+        border-radius: 20px;
+        font-weight: 500;
+        font-size: 14px;
+
+        .dx-icon-cart {
+          color: orange !important;
+        }
+
+        span {
+          color: black;
+        }
+
+        .cartBadge {
+          background-color: orange;
+          color: white;
+          border-radius: 50%;
+          width: 16px;
+          height: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 11px;
+        }
+      }
+
+      .search-icon {
+        font-size: 18px;
+        color: white;
+        margin: 0 10px;
+        cursor: pointer;
+      }
+
+      .avatar-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+
+      .login-avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+        background-color: #ffffff22;
+      }
+
+      .login-button {
+        font-size: 16px;
+        font-weight: 600;
+        color: gold !important;
+        text-decoration: none;
+        padding: 6px 10px;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          color: orange;
+        }
+      }
+
+      .logout-button {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .header-home {
+    width: 100%;
+  }
+
+  .header-container {
+    flex-direction: column !important;
+
+    .header-left .logo img {
+      margin-right: 10px !important;
+    }
+
+  }
+
+  .toolbar {
+    justify-content: space-between;
+    width: 100% !important;
+
+    .mobile-toggle {
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+
+      .dx-button-content {
+        color: white;
+        background-color: #050f2d;
+      }
+
+
+
+      .dx-buttongroup-wrap {
+        display: none;
+      }
+
+
+      .dx-treeview-item,
+      .dx-item-content,
+      .menu-container .dx-item {
+        color: unset !important;
+      }
+
+      .dx-button-mode-text {
+        background-color: violet !important;
+      }
+    }
+
+
+
+    .dx-button-mode-text {
+      margin-bottom: 4px;
+      background-color: unset !important;
+    }
+
+    .search-icon {
+      display: inline-block;
+      font-size: 20px;
+      color: white;
+      margin: 0 10px;
+    }
+
+    .cartButton {
+      display: flex;
+      font-size: 13px;
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+
+  }
+
+  .menu-container.mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5rem;
+
+    .navLink,
+    .dropdown .dx-button-content {
+      padding: 0.75rem 1rem;
+      color: white;
+      justify-content: flex-start;
+      text-align: left;
+      font-weight: 500;
+    }
+  }
+}

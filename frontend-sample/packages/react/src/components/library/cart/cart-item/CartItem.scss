@@ -1,0 +1,54 @@
+@use "../../../../variables.scss" as *;
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+
+    .product-info {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        img {
+            width: 30%;
+            height: auto;
+            object-fit: cover;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .name-delete {
+            display: flex;
+            flex-direction: column;
+
+            div {
+                font-weight: 500;
+                margin-bottom: 0.5rem;
+            }
+
+            .dx-button {
+                padding: 0;
+                font-size: 0.85rem;
+                color: red;
+            }
+        }
+    }
+
+    .unit-price,
+    .total-price {
+        color: #f60;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .quantity {
+        text-align: center;
+
+        .dx-numberbox {
+            width: 100px;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+import { BlogList } from './blog/blog-list';
+export { UserProfile } from './user-profile/user-profile';
+export { CRMContactList } from './crm-contact-list/crm-contact-list';
+export { CRMContactDetails } from './crm-contact-details/crm-contact-details';
+export { PlanningTaskList } from './planning-task-list/planning-task-list';
+export { PlanningTaskDetails } from './planning-task-details/planning-task-details';
+export { ProductList } from './product-list/product-list';
+export { ProductDetails } from './product-details/product-details';
+export { BillList } from './bill-list/bill-list';
+export { BillDetails } from './bill-details/bill-details';
+export { DeliveryList } from './delivery-list/delivery-list';
+export { DeliveryDetails } from './delivery-details/delivery-details';

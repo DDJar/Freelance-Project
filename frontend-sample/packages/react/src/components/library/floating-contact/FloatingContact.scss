@@ -1,0 +1,38 @@
+.floating-contact-container {
+    position: fixed;
+
+    .contact-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #e60000;
+        border-radius: 50%;
+        padding: 15px;
+        transition: transform 0.2s ease-in-out;
+        border: #e60000;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+
+    }
+
+    .contact-popup-content {
+        padding: 16px;
+
+        h3 {
+            margin: 0 0 10px;
+            color: #d80000;
+            font-size: 16px;
+        }
+
+        .info {
+            font-size: 14px;
+
+            p {
+                margin: 8px 0;
+            }
+        }
+    }
+}
